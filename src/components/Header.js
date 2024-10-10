@@ -15,7 +15,7 @@ const Header = () => {
         <div className="flex items-center gap-4">
             <DarkMode />
             
-            <LiaImdb className="bg-amber-400 w-[80px] p-0 h-10" />
+            <LiaImdb className="bg-amber-400 w-[80px] p-0 h-10 rounded-full" />
         </div>
 
     </div>

@@ -16,12 +16,12 @@ const DarkMode = () => {
       {mounted &&
         (currentTheme === "dark" ? (
           <MdLightMode
-            className="text-xl cursor-pointer hover:text-amber-400"
+            className="text-xl cursor-pointer hover:text-amber-400 transition-colors duration-300"
             onClick={() => setTheme("light")}
           />
         ) : (
           <MdDarkMode
-            className="text-xl cursor-pointer hover:text-amber-400"
+            className="text-xl cursor-pointer hover:text-amber-400 transition-colors duration-300"
             onClick={() => setTheme("dark")}
           />
         ))}
