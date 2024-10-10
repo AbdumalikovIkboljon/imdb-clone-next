@@ -11,14 +11,18 @@ const Card = ({ result }) => {
   return (
     <div className="cursor-pointer border sm:rounded-b-lg shadow-md">
       <Link href={`/movie/${result.id}`}>
-        <Image
-          className="w-full hover:opacity-75 transition-opacity duration-300"
-          src={`https://image.tmdb.org/t/p/original/${result.poster_path ? result.poster_path : result.backdrop_path}`}
-          width={500}
-          height={300}
-          alt={result.title || result.original_title || result.name || result.original_name}
-          priority
-        />
+        {result.backdrop_path ? (
+            <Image
+            className="w-full h-[403px] hover:opacity-75 transition-opacity duration-300"
+            src={`https://image.tmdb.org/t/p/original/${result.poster_path ? result.poster_path : result.backdrop_path}`}
+            width={500}
+            height={300}
+            alt={result.title || result.original_title || result.name || result.original_name}
+            priority
+          />
+        ) : (
+          <div className="w-full h-[403px] bg-gray-300 flex items-center justify-center" >Image Not Found</div>
+        )}
         <div className="flex flex-col gap-3 p-4">
           <p className="flex gap-1 items-center">
             <span>
