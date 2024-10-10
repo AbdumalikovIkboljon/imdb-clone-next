@@ -12,10 +12,8 @@ const Card = ({ result }) => {
     <div className="cursor-pointer border sm:rounded-lg shadow-md">
       <Link href={`/${result.id}`}>
         <Image
-          className=" hover:opacity-75 transition-opacity duration-300"
-          src={`https://image.tmdb.org/t/p/original/${
-            result.backdrop_path || result.poster_path
-          }`}
+          className="w-full hover:opacity-75 transition-opacity duration-300"
+          src={`https://image.tmdb.org/t/p/original/${result.poster_path ? result.poster_path : result.backdrop_path}`}
           width={500}
           height={300}
           alt={result.title}
