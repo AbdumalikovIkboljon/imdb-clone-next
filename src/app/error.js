@@ -5,13 +5,13 @@ import { useEffect } from "react"
 const error = ( { error, reset  }) => {
 
     useEffect(() => {
-      // Log the error to an error reporting service
       console.error(error)
     }, [error])
   return (
-    <div>
-      <h2>Something went wrong!</h2>
+    <div className="max-w-6xl mx-auto flex items-center justify-center mt-16">
+      <h2 className='text-xl mr-3'>Something went wrong!</h2>
       <button
+       className="text-white px-4 py-2 bg-amber-400 rounded-full hover:bg-amber-500 transition-colors duration-300"
         onClick={
           () => reset()
         }
