@@ -9,8 +9,8 @@ const Card = ({ result }) => {
   const year = new Date(releaseDate).getFullYear();
 
   return (
-    <div className="cursor-pointer border sm:rounded-lg shadow-md">
-      <Link href={`/${result.id}`}>
+    <div className="cursor-pointer border sm:rounded-b-lg shadow-md">
+      <Link href={`/movie/${result.id}`}>
         <Image
           className="w-full hover:opacity-75 transition-opacity duration-300"
           src={`https://image.tmdb.org/t/p/original/${result.poster_path ? result.poster_path : result.backdrop_path}`}
