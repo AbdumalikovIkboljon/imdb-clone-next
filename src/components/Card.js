@@ -16,7 +16,8 @@ const Card = ({ result }) => {
           src={`https://image.tmdb.org/t/p/original/${result.poster_path ? result.poster_path : result.backdrop_path}`}
           width={500}
           height={300}
-          alt={result.title}
+          alt={result.title || result.original_title || result.name || result.original_name}
+          priority
         />
         <div className="flex flex-col gap-3 p-4">
           <p className="flex gap-1 items-center">

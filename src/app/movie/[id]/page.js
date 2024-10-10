@@ -23,10 +23,6 @@ export default async function MoviePage({ params }) {
     return `${languageMap[original_language] || "Unknown"}`;
   };
 
-  // Example usage:
-  const original_language = "en";
-  console.log(renderLanguage(original_language)); // Output: "Language: English"
-
   return (
     <div className="w-full flex items-center justify-center">
       <div className="p-4 md:pt-8 flex flex-col md:flex-row content-center max-w-7xl mx-auto md:space-x-6">
@@ -38,6 +34,8 @@ export default async function MoviePage({ params }) {
           height={450}
           className="rounded-lg w-full md:w-1/3 mb-6 md:mb-0"
           style={{ maxWidth: "100%", height: "100%" }}
+          alt={movie.title || movie.name}
+          priority
         ></Image>
         <div className="px-2 my-auto md:w-2/3">
           <h2 className="text-4xl mb-5 font-bold tracking-wider">
